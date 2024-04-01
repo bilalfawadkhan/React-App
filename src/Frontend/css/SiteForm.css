@@ -1,0 +1,16 @@
+.siteform-container {
+    display: grid;  
+   grid-template-columns: 8% 1fr;
+   grid-template-rows: 7% 1fr ; 
+   gap: 1.1rem;
+}
+
+.site-mid-conatiner{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    color: white;
+}
+
+.white-text{
+    color: white;
+}
