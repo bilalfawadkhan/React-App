@@ -3,19 +3,12 @@ import './css/Dasboard.css'
 
 const Dasboard = () => {
 const getData = () => {
-
 return 'null'
-
-
 };
-
 
   return (
     <div>
     <div className="container-dasboard">
-       {/* <div>
-        <img src="home_13317522.png" className="icon"/>
-       </div> */}
        <form className='search_bar'>
         <input type="search" placeholder="Search..."/>
       </form>
@@ -25,15 +18,6 @@ return 'null'
             <img src="home_13317522.png" className="icon"/>
             <p>Secure one</p>
         </div>
-        {/* <ul className="border_style_shdow">
-            <li><a><img src="home_13317522.png" className="icon"/></a></li>
-            <li><a><img src="home_13317522.png" className="icon"/></a></li>
-            <li><a><img src="home_13317522.png" className="icon"/></a></li>
-            <li><a><img src="home_13317522.png" className="icon"/></a></li>
-            <li><a><img src="home_13317522.png" className="icon"/></a></li>
-            <li><a><img src="home_13317522.png" className="icon logout_icon"/></a></li>
-            
-        </ul> */}
         <div className="box1 border_style_shdow">
         </div>
         <div className="box2 border_style_shdow">

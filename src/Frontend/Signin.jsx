@@ -34,40 +34,23 @@ const Signin = () => {
     };
   
   
-  const passwordValidation = (password) => {
-   // Password validation
-   if (password.length > 8) {
-      // setError('Password must be at least 8 characters long');
-      updateElement(0,true);
-  }
-  else{
-      updateElement(0,false);
-  }
-  // Password must contain at least one uppercase letter
-  if (/[A-Z]/.test(password)) {
-      // setError('Password must contain at least one uppercase letter');
-      updateElement(1,true);
-  }
-  else{
-      updateElement(1,false);
-  }
-  // Password must contain at least one lowercase letter
-  if (/[a-z]/.test(password)) {
-      // setError('Password must contain at least one lowercase letter');
-      updateElement(2,true);
-  }
-  else{
-      updateElement(2,false);
-  }
-  // Password must contain at least one number
-  if (/[0-9]/.test(password)) {
-      // setError('Password must contain at least one number');
-      updateElement(3,true);
-  }
-  else{
-      updateElement(3,false);
-  }
-  }
+const passwordValidation = (password) => {
+    const tests = [
+        { test: (pw) => pw.length > 8, index: 0 },
+        { test: (pw) => /[A-Z]/.test(pw), index: 1 },
+        { test: (pw) => /[a-z]/.test(pw), index: 2 },
+        { test: (pw) => /[0-9]/.test(pw), index: 3 },
+    ];
+
+    tests.forEach(({ test, index }) => {
+        if (test(password)) {
+            updateElement(index, true);
+        } else {
+            updateElement(index, false);
+        }
+    });
+};
+ 
   //for Handling submit button
   const handleSubmit = (e) => {
       e.preventDefault();
@@ -97,20 +80,11 @@ const Signin = () => {
   };
   
   const setImage = (validation,option) => {
-      if(option == 1){
-          return passwordValid[0] ? imgTick : imgCross;
-      }
-      if(option == 2){
-          return passwordValid[1] ? imgTick : imgCross;
-      }
-      if(option == 3){
-          return passwordValid[2] ? imgTick : imgCross;
-      }
-      if(option == 4){
-          return passwordValid[3] ? imgTick : imgCross;
-      }
-      return validation ? imgTick : imgCross;
-  };
+    if(option !== undefined){
+        return passwordValid[option] ? imgTick : imgCross;
+    }
+    return validation ? imgTick : imgCross;
+};
   // Handling SuccessMessege
   const successMessege  = () => {
   return(
@@ -161,10 +135,10 @@ const Signin = () => {
                           <i className="button__icon fas fa-chevron-right"></i>
                       </button>
                       <div className="password_validation" style={{display: password ? '' :"none"}}>
-                          <p className="validation_text"><img src={setImage(passwordValid,1)} className="validation-icon" alt="validation" />Contain at least 8 characters</p>
-                          <p className="validation_text"><img src={setImage(passwordValid,2)} className="validation-icon" alt="validation" />Contain at least one uppercase letter</p>
-                          <p className="validation_text"><img src={setImage(passwordValid,3)} className="validation-icon" alt="validation" />Contain at least one lowercase letter</p>
-                          <p className="validation_text"><img src={setImage(passwordValid,4)} className="validation-icon" alt="validation" />Contain at least one number</p>
+                          <p className="validation_text"><img src={setImage(passwordValid,0)} className="validation-icon" alt="validation" />Contain at least 8 characters</p>
+                          <p className="validation_text"><img src={setImage(passwordValid,1)} className="validation-icon" alt="validation" />Contain at least one uppercase letter</p>
+                          <p className="validation_text"><img src={setImage(passwordValid,2)} className="validation-icon" alt="validation" />Contain at least one lowercase letter</p>
+                          <p className="validation_text"><img src={setImage(passwordValid,3)} className="validation-icon" alt="validation" />Contain at least one number</p>
                       </div>			
                   </form>
                   <div className="social-login">

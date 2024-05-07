@@ -1,10 +1,19 @@
 class SiteObject {
-    constructor(name, url,city,lat,long) {
+    constructor(name, url,city,lat,long,postcode,timeOn,timeoff,companyName,agree,guards,checkCall,daysArray) {
         this.name = name;
         this.url = url;
         this.city = city;
         this.lat = lat;
         this.long = long;
+        this.postcode = postcode;
+        this.timeoff = timeoff;
+        this.timeOn = timeOn;
+        this.companyName = companyName;
+        this.agree = agree;
+        this.guards = guards;
+        this.checkCall = checkCall;
+        this.daysArray = daysArray;
+
     }
     setName(name) {
         this.name = name;

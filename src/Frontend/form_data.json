@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "sitename": "Example Site",
+    "daysOfWeek": ["Monday", "Wednesday", "Friday"],
+    "address": "1234 Example St",
+    "postcode": "AB12 3CD",
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "guards": 2,
+    "checkcall": 0
+  },
+  {
+    "id": 2,
+    "sitename": "Another Site",
+    "daysOfWeek": ["Tuesday", "Thursday"],
+    "address": "5678 Another St",
+    "postcode": "EF34 5GH",
+    "startTime": "09:00",
+    "endTime": "18:00",
+    "guards": 3,
+    "checkcall": 1
+  }
+]

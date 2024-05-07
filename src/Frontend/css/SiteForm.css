@@ -1,16 +1,49 @@
+
 .siteform-container {
-    display: grid;  
+    /* display: grid;  
    grid-template-columns: 8% 1fr;
    grid-template-rows: 7% 1fr ; 
-   gap: 1.1rem;
+   gap: 1.1rem; */
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   /* left: 100px; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .site-mid-conatiner{
-    grid-column: 2/3;
-    grid-row: 2/3;
+    position: absolute;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
     color: white;
+    width: 60%;
+    justify-self: center;
+    background-color: #222964;
+    padding: 20px 30px 30px 30px;
+    border-radius: 30px;
+    top: 100px;
+    margin-left: 200px;
 }
 
-.white-text{
-    color: white;
+.siteForm {
+    transition: opacity 0.4s ease-in-out;
+    /* visibility: hidden; */
+    opacity: 0;
+    
 }
+
+.siteForm.visible {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+.close-btn{
+    margin-bottom: 10px;
+}
+
+
+

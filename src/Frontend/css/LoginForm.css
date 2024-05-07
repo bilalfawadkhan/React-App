@@ -91,9 +91,21 @@
 	margin-left: 20px;
 }
 
+.messeges{
+	font-size: 0.5rem;
+}
+
 .login__field {
-	padding: 20px 0px;	
+	padding: 20px 0px 0px 0px;	
 	position: relative;	
+	/* transition: transform 0.5s ease; */
+    /* transform: translateY(0); */
+	transition: margin-top 0.5s ease;
+}
+.login__field.move {
+	/* transform: translateY(50px); */
+	margin-top: 80px;
+
 }
 
 .login__icon {
@@ -193,10 +205,17 @@ p.validation_text{
 .password_validation{
 	/* display: flex; */
 	/* align-items: center; */
-	margin-top: 20px;
-	padding: 10px 0px 10px 10px;
-    background-color: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	padding: 10px 0px 10px 00px;
+	margin-left: -20px;
+    background-color: rgba(255, 255, 255, 1);
 	border-radius: 20px;
 	font-weight: 500;
-
+	transition: opacity 0.5s ease;
+	opacity: 0;
 }
+
+.password_validation.show{
+	opacity: 1;
+}
+
