@@ -26,8 +26,12 @@ import {
 
 const SiteForm = ({value,setPopup}) => {
   
-  const handleClose = () => {
-    setPopup(false);
+  const handleClose = (e) => {
+    console.log(e.target.className);
+    if (e.target.className === 'siteform-container siteForm visible' || e.target.closest('.close-btn')) {
+      console.log(e.target.className);
+      setPopup(false);
+    }
   }
 
   const normFile = (e) => {
@@ -49,7 +53,7 @@ const SiteForm = ({value,setPopup}) => {
 
   return (
     <div className={`siteform-container siteForm ${value ? 'visible' : ''}`} onClick={handleClose}> 
-      <div className='site-mid-conatiner'>
+      <div className='site-mid-conatiner' >
         <Button type="primary" className ='close-btn' htmlType="submit" onClick={handleClose} icon={<CloseOutlined/>}></Button>
 
         <ConfigProvider
