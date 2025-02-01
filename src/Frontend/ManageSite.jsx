@@ -25,7 +25,7 @@ const ManageSite = () => {
       {/* to be changed to value = popup */}
     < SiteForm value={popup} setPopup={setPopup}/> 
     <div className= {`manageSite-container ${popup ? 'blur' : ''} `}>
-      {/* <SiteForm/> */}
+  
       <div className='manageSite-mid-conatiner border_style_shdow'>
         <ConfigProvider
           theme={{
@@ -51,8 +51,7 @@ const ManageSite = () => {
         </ConfigProvider>
           <div className='site-list'>
             <ul className='site-ul'>
-  <CustomList jsonEntry={json}/>
-
+        <CustomList jsonEntry={json}/>
             </ul>
           </div>
       </div>

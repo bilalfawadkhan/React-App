@@ -8,3 +8,12 @@ export const login = async (em,pass) =>{
     console.log(e);
  } 
 }
+
+export const addtodb = async (jsonEntry) =>{
+      try{
+         const res = await request({url:'http://localhost:8080/add',method:"POST",data:jsonEntry,auth:true},true);
+         return res;
+      }catch(e){
+         console.log(e);
+      }
+   }

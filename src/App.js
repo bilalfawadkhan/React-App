@@ -8,6 +8,7 @@ import SiteForm from './Frontend/SiteForm';
 import ManageSite from './Frontend/ManageSite';
 import WebFont from 'webfontloader';
 import { useEffect } from 'react';
+import CrewManage from './Frontend/CrewManage';
 
 
 
@@ -22,14 +23,13 @@ const App = () => {
    }, []);
   return (
     <>
-    {/* {islogged ?  : <></>} */}
     <Navbar/>
     <div>
     <Routes>
     <Route path ='/' element={<Signup/>}/>
     <Route path ='/home' element={<Dasboard/>}/>
-    <Route path ='/manageSite' element={<SiteForm/>}/>
-    <Route path ='/crewManage' element={<ManageSite/>}/>
+    <Route path ='/manageSite' element={<ManageSite/>}/>
+    <Route path ='/crewManage' element={<CrewManage/>}/>
     </Routes>
     </div>
     
