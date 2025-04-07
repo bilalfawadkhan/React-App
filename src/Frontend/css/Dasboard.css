@@ -1,5 +1,6 @@
 :root{
     --primary_color: #141625;
+    --primary_light : #222537;
     --border_color :#62588f;
     --fw-400: 500;
     --fw-700: 600;
@@ -67,6 +68,7 @@ dd {
     width: 758px;
     height: 251px;
     grid-column-start: 2;
+    color: white;
 }
 .box2{
     background-color: var(--primary_color);
@@ -93,6 +95,23 @@ dd {
     width: 458px;
     height: 390px;
     grid-row: span 2;
+   
+}
+.box3_inside{
+background-color: var(--primary_light);
+display: flex;
+align-items: center;
+margin: 20px 0px 0px 20px;
+/* border: 3px solid; */
+border-radius: 5px;
+width: 90%;
+height: 40px;
+}
+
+.box3_inside_p{
+    margin-left: 20px;
+    font-size: 1.2rem;
+    color: white;
 }
 
 .box4{
@@ -105,6 +124,7 @@ dd {
     grid-column-start: 3;
     grid-row: 2;
     justify-content: center;
+    color: white;
  
 }
 .box4_inner{
