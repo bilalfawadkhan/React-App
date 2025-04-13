@@ -7,11 +7,11 @@ import Dasboard from './Frontend/Dasboard';
 import SiteForm from './Frontend/SiteForm';
 import ManageSite from './Frontend/ManageSite';
 import CrewManage from './Frontend/CrewManage';
+import NEDashboard from './Frontend/NEDashboard';
 import { useState, useEffect } from 'react';
 import WebFont from 'webfontloader';
 
 
-import './index.css';
 
 
 
@@ -29,7 +29,7 @@ const App = () => {
     <Navbar/>
     <div>
     <Routes>
-    <Route path ='/' element={<Signup/>}/>
+    <Route path ='/' element={<NEDashboard/>}/>
     <Route path ='/home' element={<Dasboard/>}/>
     <Route path ='/manageSite' element={<ManageSite/>}/>
     <Route path ='/crewManage' element={<CrewManage/>}/>
