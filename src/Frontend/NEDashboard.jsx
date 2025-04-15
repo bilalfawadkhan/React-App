@@ -8,7 +8,7 @@ const NEDashboard = () => {
           <input type="text" placeholder="Search..."/>
           <button >Search</button>
         </form>
-        <div className="bg-red-400 flex items-center ml-auto gap-x-4 p-2">
+        <div className="bg-red-400 flex items-center ml-auto gap-x-5 p-2">
           <img src="home_13317522.png" className=""/>
           <img src="home_13317522.png" className=""/>
           <img src="home_13317522.png" className=""/>
