@@ -16,12 +16,13 @@ const NEDashboard = () => {
       </div>
         </div>
 
-      <div>
-      <div className="nbox1"></div>
-      <div className="nbox2"></div>
-      <div className="nbox3"></div>
-      <div className="nbox4"></div>
-      <div className="nbox5"></div>
+      <div className='grid grid-cols-2 gap-4 p-4'>
+      <div className="nbox1 bg-violet-300 h-20">1</div>
+      <div className="nbox2 bg-red-300 h-20">2</div>
+
+      <div className="nbox3 bg-blue-300 h-20">3</div>
+      <div className="nbox4 bg-green-300 h-20">4</div>
+      <div className="nbox5 bg-cyan-300 h-20">5</div>
       </div>
       
     </div>

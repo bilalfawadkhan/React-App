@@ -27,7 +27,7 @@ const App = () => {
   return (
     <>
     <Navbar/>
-    <div>
+    <div className='pl-[7rem]'>
     <Routes>
     <Route path ='/' element={<NEDashboard/>}/>
     <Route path ='/home' element={<Dasboard/>}/>
