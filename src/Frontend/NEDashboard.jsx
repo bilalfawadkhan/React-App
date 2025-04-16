@@ -4,11 +4,11 @@ const NEDashboard = () => {
   return (
     <div>
       <div className="flex justify-center items-center bg-gray-800 text-white p-4">
-        <form className='flex mx-auto'>
-          <input type="text" placeholder="Search..."/>
+        <form className='flex items-center gap-x-4 grow ml-auto'>
+          <input type="text" placeholder="Search..." className='w-96'/>
           <button >Search</button>
         </form>
-        <div className="bg-red-400 flex items-center ml-auto gap-x-5 p-2">
+        <div className="bg-red-400 flex items-center justify-self-end gap-x-5 p-2">
           <img src="home_13317522.png" className=""/>
           <img src="home_13317522.png" className=""/>
           <img src="home_13317522.png" className=""/>
@@ -17,12 +17,11 @@ const NEDashboard = () => {
         </div>
 
       <div className='grid grid-cols-2 gap-4 p-4'>
-      <div className="nbox1 bg-violet-300 h-20">1</div>
-      <div className="nbox2 bg-red-300 h-20">2</div>
+      <div className=" bg-violet-300 h-20">1</div>
+      <div className=" bg-red-300 h-20">2</div>
 
-      <div className="nbox3 bg-blue-300 h-20">3</div>
-      <div className="nbox4 bg-green-300 h-20">4</div>
-      <div className="nbox5 bg-cyan-300 h-20">5</div>
+      <div className=" bg-blue-300 h-20">3</div>
+      <div className=" col-start-1 bg-cyan-300 h-20">5</div>
       </div>
       
     </div>
